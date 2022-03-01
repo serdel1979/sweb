@@ -4,8 +4,8 @@ import { LoginComponent } from './components/login/login.component';
 import { Err404Component } from './components/err404/err404.component';
 
 const routes: Routes = [ 
-  {path: 'login',  pathMatch:'full', redirectTo: 'login'},
-  {path: 'logout',  component: LoginComponent},
+  {path: 'login',  component: LoginComponent},
+  {path: 'logout',  redirectTo:'login'},
   {path: '', component: LoginComponent},
   {path: 'dashboard', loadChildren: ()=> import('./components/dashboard/dashboard.module').then(x => x.DashboardModule)},
   {path: '**', pathMatch: 'full', component: Err404Component },

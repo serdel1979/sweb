@@ -21,3 +21,6 @@ body {
     color: #252424
 }
 
+.example-spacer{
+    flex: 1 1 auto;
+}
