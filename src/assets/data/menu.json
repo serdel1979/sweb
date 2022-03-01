@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "Seguimientos",
+        "redirect": "/dashboard"
+    },
+    {
+        "nombre": "Notificaciones",
+        "redirect": ""
+    },
+    {
+        "nombre": "Inspecciones",
+        "redirect": ""
+    },
+    {
+        "nombre": "Confirmados",
+        "redirect": ""
+    }
+]

@@ -1,0 +1,37 @@
+table {
+    width: 100%;
+    margin-top: 10px;
+    background: #979191;
+    width: 100%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.mat-cell, .mat-footer-cell {
+    color: #252424;
+}
+
+.barra {
+    background: #979191;
+    color: #252424;
+}
+
+.mat-header-cell {
+    color: rgb(12 12 12 / 70%);
+    font-size: 14px;
+}
+
+
+
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+body {
+    background: #4e4d4d;
+    color: #252424;
+}

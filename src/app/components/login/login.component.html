@@ -1,0 +1,20 @@
+<div class="body">
+
+    <div class="login">
+        <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
+        <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
+
+            <mat-form-field class="ancho">
+                <mat-label>Clave de acceso</mat-label>
+                <input type="password" matInput placeholder="Contraseña" formControlName="password" focus-me="shouldBeOpen">
+                <mat-icon matSuffix></mat-icon>
+                <mat-hint></mat-hint>
+            </mat-form-field>
+            <br>
+            <button type="submit" class="ancho button" mat-raised-button color="primary"
+                [disabled]="form.invalid">Ingresar</button>
+        </form>
+    </div>
+
+
+</div>

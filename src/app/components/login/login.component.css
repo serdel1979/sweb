@@ -1,0 +1,41 @@
+.body {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;    
+    background: #4e4d4d;
+    color: #252424;
+}
+
+.login {
+
+    width: 100%;
+    max-width: 330px;
+    text-align: center;
+}
+
+.ancho {
+    width: 80%;
+}
+
+.button {
+    height: 50px;
+}
+
+.spinner {
+    margin: 0 auto;
+}
+
+
+.mat-input-element {
+    caret-color: #181717;
+}
+
+
+.mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+    background-color: #181717;
+}
+
+form-field-invalid .mat-input-element {
+    caret-color: #181717;
+}
