@@ -10,9 +10,5 @@
     {
         "nombre": "Inspecciones",
         "redirect": ""
-    },
-    {
-        "nombre": "Confirmados",
-        "redirect": ""
     }
 ]

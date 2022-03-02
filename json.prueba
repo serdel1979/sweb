@@ -1,3 +1,5 @@
+npm install -g json-server
+
 json-server --watch dbinmobiliarios.json
 
 http://localhost:3000/inmobiliarios

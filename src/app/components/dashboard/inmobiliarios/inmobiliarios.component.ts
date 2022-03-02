@@ -5,6 +5,8 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Inmobiliario } from 'src/app/interfaces/inmobiliarios';
 import { InmobiliariosService } from 'src/app/services/inmobiliarios.service';
+import { finalize } from 'rxjs/operators';
+
 
 
 
@@ -15,7 +17,10 @@ import { InmobiliariosService } from 'src/app/services/inmobiliarios.service';
 })
 export class InmobiliariosComponent implements OnInit {
 
-  listInmobiliarios: Inmobiliario[] = []
+  //listInmobiliarios: Inmobiliario[] = [];
+
+
+  listInmobiliarios: any;
 
   displayedColumns: string[] = ['nombre', 'tipo', 'titulares', 'estado', 'idCou', 'idMae', 'Acciones'];
 
@@ -32,8 +37,12 @@ export class InmobiliariosComponent implements OnInit {
   }
 
 
+
+
   cargarInmobiliarios() {
-    this.listInmobiliarios = this._inmobiliariosServices.getConjuntosInmobiliarios();
+   // this.listInmobiliarios = this._inmobiliariosServices.getConjuntosInmobiliarios();
+    this.listInmobiliarios = this._inmobiliariosServices.getInmobiliarios();
+    console.log("despues de llamada al api ",this.listInmobiliarios);
     this.dataSource = new MatTableDataSource(this.listInmobiliarios);
   }
 

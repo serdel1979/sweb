@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Inmobiliario } from '../interfaces/inmobiliarios';
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,18 @@ export class InmobiliariosService {
     {nombre: 'Guaymallén', tipo: 'Urbano', titulares: 7, estado: 'Confirmado', idCou: 'a39', idMae: '66'},
   ];
 
-  constructor() { }
+  constructor( private http: HttpClient ) { }
+
+
+
+
+
+  
+  getInmobiliarios(){
+    this.http.get('http://localhost:3000/inmobiliarios').subscribe(data => {
+      return data;
+    });
+  }
 
   getConjuntosInmobiliarios(){
       return this.listInmobiliarios.slice();
