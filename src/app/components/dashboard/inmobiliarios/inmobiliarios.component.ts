@@ -33,6 +33,7 @@ export class InmobiliariosComponent implements OnInit {
      this.inmobiliariosServices.getInmobiliarios().subscribe(data =>{ 
       this.dataSource = new MatTableDataSource<Inmobiliario>(data);
       this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
      });
   }
 
