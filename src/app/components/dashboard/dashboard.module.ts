@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { InmobiliariosComponent } from './inmobiliarios/inmobiliarios.component';
+import { CrearInmobiliarioComponent } from './crear-inmobiliario/crear-inmobiliario.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { InmobiliariosComponent } from './inmobiliarios/inmobiliarios.component'
     DashboardComponent,
     InicioComponent,
     NavbarComponent,
-    InmobiliariosComponent
+    InmobiliariosComponent,
+    CrearInmobiliarioComponent
   ],
   imports: [
     CommonModule,
