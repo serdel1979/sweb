@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Inmobiliario } from '../interfaces/inmobiliarios';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +29,7 @@ export class InmobiliariosService {
 
 
   
-  getInmobiliarios(){
+  getInmobiliarios(): Observable<>{
     this.http.get('http://localhost:3000/inmobiliarios').subscribe(data => {
       return data;
     });
