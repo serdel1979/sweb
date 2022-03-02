@@ -5,9 +5,6 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Inmobiliario } from 'src/app/interfaces/inmobiliarios';
 import { InmobiliariosService } from 'src/app/services/inmobiliarios.service';
-import { finalize } from 'rxjs/operators';
-
-
 
 
 @Component({
@@ -17,35 +14,32 @@ import { finalize } from 'rxjs/operators';
 })
 export class InmobiliariosComponent implements OnInit {
 
-  //listInmobiliarios: Inmobiliario[] = [];
+  listInmobiliarios: Inmobiliario[] = [];
 
 
-  listInmobiliarios: any;
-
+  
   displayedColumns: string[] = ['nombre', 'tipo', 'titulares', 'estado', 'idCou', 'idMae', 'Acciones'];
 
   dataSource!: MatTableDataSource<any>;
 
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
+  //@ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
 
-  constructor(private _inmobiliariosServices: InmobiliariosService, private _snackBar: MatSnackBar) { }
+  constructor(public inmobiliariosServices: InmobiliariosService, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
-    this.cargarInmobiliarios();
+     this.inmobiliariosServices.getInmobiliarios().subscribe(data =>{ 
+      this.dataSource = new MatTableDataSource<Inmobiliario>(data);
+      this.dataSource.paginator = this.paginator;
+     });
   }
 
 
 
 
-  cargarInmobiliarios() {
-   // this.listInmobiliarios = this._inmobiliariosServices.getConjuntosInmobiliarios();
-    this.listInmobiliarios = this._inmobiliariosServices.getInmobiliarios();
-    console.log("despues de llamada al api ",this.listInmobiliarios);
-    this.dataSource = new MatTableDataSource(this.listInmobiliarios);
-  }
-
+  
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -58,17 +52,7 @@ export class InmobiliariosComponent implements OnInit {
   }
 
   eliminarInmo(index: number) {
-    //console.log(index);
-    this._inmobiliariosServices.eliminarInmo(index);
-    this.cargarInmobiliarios();
-
-
-    this._snackBar.open("Registro eliminado", '', {
-      duration: 1500,
-      horizontalPosition: 'center',
-      verticalPosition: 'bottom'
-    })
-
+   
   }
 
 

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Inmobiliario } from '../interfaces/inmobiliarios';
-import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -25,19 +25,14 @@ export class InmobiliariosService {
   constructor( private http: HttpClient ) { }
 
 
+  AllInmobiliarios: Inmobiliario[] = [];
 
 
+  getInmobiliarios(): Observable<Inmobiliario[]>{
+    return this.http.get<Inmobiliario[]>('http://localhost:3000/inmobiliarios');
+  }
 
   
-  getInmobiliarios(): Observable<>{
-    this.http.get('http://localhost:3000/inmobiliarios').subscribe(data => {
-      return data;
-    });
-  }
-
-  getConjuntosInmobiliarios(){
-      return this.listInmobiliarios.slice();
-  }
 
   eliminarInmo(index: number){
     //console.log(index);
