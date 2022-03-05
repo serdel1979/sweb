@@ -1,2 +1,58 @@
 <app-navbar></app-navbar>
-<p>crear-inmobiliario works!</p>
+<div class="container">
+    <mat-toolbar class="barra">
+        <span>Creando un inmobiliario</span>
+        <div class="example-spacer"> </div>
+    </mat-toolbar>
+
+    <mat-card style="margin-top: 10px;">
+        <form>
+
+            <mat-form-field class="ancho" #input autocomplete="off" appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Tipo</mat-label>
+                <mat-select>
+                    <mat-option value="one">Barrio cerrado</mat-option>
+                    <mat-option value="two">Club de campo</mat-option>
+                    <mat-option value="two">Club de chacra</mat-option>
+                    <mat-option value="two">Urbano</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="ancho" appearance="fill" #input autocomplete="off">
+                <mat-label>Cantidad de titulares</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="ancho" appearance="fill" #input autocomplete="off">
+                <mat-label>Cantidad de titulares</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="fill" #input autocomplete="off">
+                <mat-label>Estado</mat-label>
+                <mat-select>
+                    <mat-option value="one">Confirmado</mat-option>
+                    <mat-option value="two">No confirmado</mat-option>
+                    <mat-option value="two">Descartado</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="ancho" appearance="fill" #input autocomplete="off">
+                <mat-label>Idcou</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="ancho" appearance="fill" #input autocomplete="off">
+                <mat-label>Idmae</mat-label>
+                <input matInput>
+            </mat-form-field>
+
+        </form>
+    </mat-card>
+</div>
