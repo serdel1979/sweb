@@ -1,6 +1,7 @@
 {
   "inmobiliarios": [
     {
+      "id": "1",
       "nombre": "Abril",
       "tipo": "Barrio cerrado",
       "titulares": "4",
@@ -9,6 +10,7 @@
       "idMae": "45"
     },
     {
+      "id": "2",
       "nombre": "Grand Bell",
       "tipo": "Barrio cerrado",
       "titulares": "3",
@@ -17,6 +19,7 @@
       "idMae": "46"
     },
     {
+      "id": "3",
       "nombre": "Los Ceibos",
       "tipo": "Barrio cerrado",
       "titulares": "2",
@@ -25,6 +28,7 @@
       "idMae": "21"
     },
     {
+      "id": "4",
       "nombre": "Los Naranjos",
       "tipo": "Barrio cerrado",
       "titulares": "5",
@@ -33,6 +37,7 @@
       "idMae": "22"
     },
     {
+      "id": "5",
       "nombre": "Montañas",
       "tipo": "Club de chacra",
       "titulares": "3",
@@ -41,6 +46,7 @@
       "idMae": "11"
     },
     {
+      "id": "6",
       "nombre": "Verdin",
       "tipo": "Club de campo",
       "titulares": "2",
@@ -49,6 +55,7 @@
       "idMae": "12"
     },
     {
+      "id": "7",
       "nombre": "Ayacucho",
       "tipo": "Urbano",
       "titulares": "1",
@@ -57,6 +64,7 @@
       "idMae": "87"
     },
     {
+      "id": "8",
       "nombre": "Los Milaneses",
       "tipo": "Urbano",
       "titulares": "2",
@@ -65,6 +73,7 @@
       "idMae": "88"
     },
     {
+      "id": "9",
       "nombre": "Campo Roca",
       "tipo": "Barrio cerrado",
       "titulares": "3",
@@ -73,6 +82,7 @@
       "idMae": "99"
     },
     {
+      "id": "10",
       "nombre": "Guaymallén",
       "tipo": "Urbano",
       "titulares": "7",
@@ -87,7 +97,7 @@
       "estado": "confirmado",
       "idCou": "123",
       "idMae": "aa365",
-      "id": "6544"
+      "id": "11"
     },
     {
       "nombre": "asd",
@@ -101,7 +111,7 @@
       "acta": "",
       "num_admin": "",
       "fecha": "",
-      "id": "NGlpJFS"
+      "id": "12"
     },
     {
       "nombre": "monumental",
@@ -115,7 +125,63 @@
       "acta": "",
       "num_admin": "",
       "fecha": "",
-      "id": "z1IRUNW"
+      "id": "13"
+    },
+    {
+      "nombre": "santiago",
+      "tipo": "Urbano",
+      "titulares": "2",
+      "estado": "Seguimiento",
+      "idCou": "321555",
+      "idMae": "654888",
+      "subestado": "",
+      "expediente": "",
+      "acta": "",
+      "num_admin": "",
+      "fecha": "",
+      "id": "14"
+    },
+    {
+      "nombre": "",
+      "tipo": "",
+      "titulares": "",
+      "estado": "",
+      "idCou": "",
+      "idMae": "",
+      "subestado": "",
+      "expediente": "",
+      "acta": "",
+      "num_admin": "",
+      "fecha": "",
+      "id": "15"
+    },
+    {
+      "nombre": "",
+      "tipo": "",
+      "titulares": "",
+      "estado": "Asignación de valores",
+      "idCou": "",
+      "idMae": "",
+      "subestado": "",
+      "expediente": "",
+      "acta": "",
+      "num_admin": "",
+      "fecha": "",
+      "id": "16"
+    },
+    {
+      "nombre": "",
+      "tipo": "",
+      "titulares": "",
+      "estado": "Asignación de valores",
+      "idCou": "",
+      "idMae": "",
+      "subestado": "",
+      "expediente": "",
+      "acta": "",
+      "num_admin": "",
+      "fecha": "",
+      "id": "17"
     }
   ]
 }

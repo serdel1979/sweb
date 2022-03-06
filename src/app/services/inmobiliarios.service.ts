@@ -23,6 +23,16 @@ export class InmobiliariosService {
   agregaInmobiliario(inmobiliario: Inmobiliario){
     return this.http.post<Inmobiliario>('http://localhost:3000/inmobiliarios', inmobiliario);
   }
+
+
+  getInmobiliario(id:string): Observable<Inmobiliario[]>{
+    return this.http.get<Inmobiliario[]>(`http://localhost:3000/inmobiliarios?id=${id}`);
+  }
+
+  deletInmobiliario(id:string): Observable<Inmobiliario[]>{
+    return this.http.get<Inmobiliario[]>(`http://localhost:3000/inmobiliarios?id=${id}`);
+  }
+  
   
 
 }

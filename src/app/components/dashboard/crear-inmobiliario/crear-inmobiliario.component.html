@@ -33,7 +33,7 @@
                     <mat-option *ngFor="let item of estado" [value]="item.viewValue">{{ item.viewValue }}</mat-option>
                 </mat-select>
             </mat-form-field>
-            <div *ngIf="selectedEstado=='enValores'">
+            <div *ngIf="selectedEstado=='Asignación de valores'">
                 <mat-form-field class="ancho" appearance="fill" #input autocomplete="off">
                     <mat-label>Número de expediente</mat-label>
                     <input matInput formControlName="expediente">
@@ -64,7 +64,7 @@
                 <input matInput formControlName="idMae">
             </mat-form-field>
             <br>
-            <button mat-raised-button type="submit">Guardar</button>
+            <button mat-raised-button type="submit" [disabled]="form.invalid">Guardar</button>
         </form>
         <button style="margin-top: 10px;" mat-raised-button (click)="goBack()">Volver</button>
     </mat-card>

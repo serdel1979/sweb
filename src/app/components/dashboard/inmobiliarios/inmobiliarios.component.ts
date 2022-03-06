@@ -17,7 +17,7 @@ export class InmobiliariosComponent implements OnInit {
   listInmobiliarios: Inmobiliario[] = [];
 
 
-  
+
   displayedColumns: string[] = ['nombre', 'tipo', 'titulares', 'estado', 'idCou', 'idMae', 'Acciones'];
 
   dataSource!: MatTableDataSource<any>;
@@ -30,17 +30,17 @@ export class InmobiliariosComponent implements OnInit {
   constructor(public inmobiliariosServices: InmobiliariosService, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
-     this.inmobiliariosServices.getInmobiliarios().subscribe(data =>{ 
+    this.inmobiliariosServices.getInmobiliarios().subscribe(data => {
       this.dataSource = new MatTableDataSource<Inmobiliario>(data);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
-     });
+    });
   }
 
 
 
 
-  
+
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
@@ -52,8 +52,13 @@ export class InmobiliariosComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  eliminarInmo(index: number) {
-   
+  eliminarInmobiliario(id:string) {
+    console.log(id);
+  }
+
+
+  editarInmobiliario(id:string) {
+    console.log(id);
   }
 
 
