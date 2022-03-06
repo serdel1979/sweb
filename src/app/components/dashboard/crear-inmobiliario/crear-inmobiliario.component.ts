@@ -1,13 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { InmobiliariosService } from 'src/app/services/inmobiliarios.service';
+import { Inmobiliario } from 'src/app/interfaces/inmobiliarios';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-crear-inmobiliario',
   templateUrl: './crear-inmobiliario.component.html',
   styleUrls: ['./crear-inmobiliario.component.css']
 })
+
+
 export class CrearInmobiliarioComponent implements OnInit {
 
+  public form: FormGroup;
 
   calificaciones = [
     { value: 'clubCampo', viewValue: 'Club de campo' },
@@ -25,14 +31,38 @@ export class CrearInmobiliarioComponent implements OnInit {
   ]
   selectedEstado = ""
 
-  constructor(private router: Router) { }
+
+  constructor(private fb: FormBuilder, private router: Router, private service: InmobiliariosService) {
+
+    this.form = this.fb.group({
+      nombre: ['', Validators.required],
+      tipo: ['', Validators.required],
+      titulares: ['', Validators.required],
+      estado: ['', Validators.required],
+      idCou: ['', Validators.required],
+      idMae: ['', Validators.required],
+      subestado: ['', Validators.required],
+      expediente: ['', Validators.required],
+      acta: ['', Validators.required],
+      num_admin: ['', Validators.required],
+      fecha: ['', Validators.required],
+    })
+
+  }
 
 
   goBack() {
     this.router.navigate(['dashboard/inmobiliarios']);
   }
 
+  public guardar() {
+    this.service.agregaInmobiliario(this.form.value)
+      .subscribe(data => {
+        this.goBack();
+      })
+  }
 
   ngOnInit(): void {
   }
+
 }

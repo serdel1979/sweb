@@ -88,6 +88,20 @@
       "idCou": "123",
       "idMae": "aa365",
       "id": "6544"
+    },
+    {
+      "nombre": "asd",
+      "tipo": "chacra",
+      "titulares": "3",
+      "estado": "enAnalisis",
+      "idCou": "2344",
+      "idMae": "2344",
+      "subestado": "",
+      "expediente": "",
+      "acta": "",
+      "num_admin": "",
+      "fecha": "",
+      "id": "NGlpJFS"
     }
   ]
 }
