@@ -16,7 +16,7 @@
             <mat-form-field appearance="fill">
                 <mat-label>Calificación</mat-label>
                 <mat-select [(value)]="selected" formControlName="tipo">
-                    <mat-option *ngFor="let item of calificaciones" [value]="item.value">{{ item.viewValue }}
+                    <mat-option *ngFor="let item of calificaciones" [value]="item.viewValue">{{ item.viewValue }}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
@@ -30,7 +30,7 @@
             <mat-form-field appearance="fill" #input autocomplete="off">
                 <mat-label>Estado</mat-label>
                 <mat-select [(value)]="selectedEstado" formControlName="estado">
-                    <mat-option *ngFor="let item of estado" [value]="item.value">{{ item.viewValue }}</mat-option>
+                    <mat-option *ngFor="let item of estado" [value]="item.viewValue">{{ item.viewValue }}</mat-option>
                 </mat-select>
             </mat-form-field>
             <div *ngIf="selectedEstado=='enValores'">

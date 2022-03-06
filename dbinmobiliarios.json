@@ -102,6 +102,20 @@
       "num_admin": "",
       "fecha": "",
       "id": "NGlpJFS"
+    },
+    {
+      "nombre": "monumental",
+      "tipo": "Barrio cerrado",
+      "titulares": "4",
+      "estado": "Asignación de valores",
+      "idCou": "32111",
+      "idMae": "21555",
+      "subestado": "",
+      "expediente": "",
+      "acta": "",
+      "num_admin": "",
+      "fecha": "",
+      "id": "z1IRUNW"
     }
   ]
 }
