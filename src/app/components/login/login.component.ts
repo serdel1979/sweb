@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     if (this.form.value["password"] == "sis") {
       console.log("Acceso correcto...");
       this.loading = true;
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['dashboard/inmobiliarios']);
     } else {
       this.error();
       this.form.reset();

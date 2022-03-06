@@ -7,8 +7,9 @@ import { InmobiliariosComponent } from './inmobiliarios/inmobiliarios.component'
 const routes: Routes = [
   {path: '', component: DashboardComponent, children: [
     {path: 'inmobiliarios', component: InmobiliariosComponent},
+    {path: 'crear_inmobiliario', component: CrearInmobiliarioComponent}
   ]},
-  {path: 'crear_inmobiliario', component: CrearInmobiliarioComponent}
+  //{path: 'crear_inmobiliario', component: CrearInmobiliarioComponent}
 ];
 
 @NgModule({
