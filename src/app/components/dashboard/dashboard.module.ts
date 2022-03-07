@@ -8,6 +8,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { InmobiliariosComponent } from './inmobiliarios/inmobiliarios.component';
 import { CrearInmobiliarioComponent } from './crear-inmobiliario/crear-inmobiliario.component';
+import { EditarInmobiliarioComponent } from './editar-inmobiliario/editar-inmobiliario.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CrearInmobiliarioComponent } from './crear-inmobiliario/crear-inmobilia
     InicioComponent,
     NavbarComponent,
     InmobiliariosComponent,
-    CrearInmobiliarioComponent
+    CrearInmobiliarioComponent,
+    EditarInmobiliarioComponent
   ],
   imports: [
     CommonModule,

@@ -61,6 +61,7 @@ export class CrearInmobiliarioComponent implements OnInit {
   public guardar() {
     this.service.agregaInmobiliario(this.form.value)
       .subscribe(data => {
+        console.log(this.form.value);
         this.goBack();
       })
   }
@@ -70,22 +71,8 @@ export class CrearInmobiliarioComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.cargar();
   }
 
-
-  cargar():void {
-    this.activate.params.subscribe(
-      e=>{
-        let id=e['id'];
-        if(id){
-         this.service.getInmobiliario(id).subscribe(data => {
-           this.inmobiliario = data;
-         });
-        }
-      }
-    )
- }
 
 
 
