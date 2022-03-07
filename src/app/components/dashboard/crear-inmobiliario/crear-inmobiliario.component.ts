@@ -24,7 +24,7 @@ export class CrearInmobiliarioComponent implements OnInit {
     { value: 'chacra', viewValue: 'Club de chacra' },
     { value: 'urbano', viewValue: 'Urbano' },
   ];
-  selected = '';
+  selected = 'Urbano';
   estado = [
     { value: 'enValores', viewValue: 'Asignación de valores' },
     { value: 'enActoAdmin', viewValue: 'Acto administrativo' },
@@ -32,7 +32,7 @@ export class CrearInmobiliarioComponent implements OnInit {
     { value: 'enSeguimiento', viewValue: 'Seguimiento' },
     { value: 'descartado', viewValue: 'Descartado' }
   ]
-  selectedEstado = ""
+  selectedEstado = 'Descartado';
 
 
   constructor(private fb: FormBuilder, private router: Router, private service: InmobiliariosService, private activate: ActivatedRoute) {
