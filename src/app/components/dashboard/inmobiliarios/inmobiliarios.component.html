@@ -59,10 +59,10 @@
                         <a class="pointer" style="color:#0c0c0c" matTooltip="Ver información">
                             <mat-icon>search</mat-icon>
                         </a>
-                        <a class="pointer" (click)="editarInmobiliario(element.id)"style="color:#0c0c0c" matTooltip="Editar información">
+                        <a class="pointer" [routerLink]="['../crear_inmobiliario',element.id]"style="color:#0c0c0c" matTooltip="Editar información">
                             <mat-icon>edit</mat-icon>
                         </a>
-                        <a class="pointer" (click)="eliminarInmobiliario(element.id)" style="color: #0c0c0c" matTooltip="Eliminar">
+                        <a class="pointer" [routerLink]="['../crear_inmobiliario',element.id]" style="color: #0c0c0c" matTooltip="Eliminar">
                             <mat-icon>delete</mat-icon>
                         </a>
                     </td>

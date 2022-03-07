@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { InmobiliariosService } from 'src/app/services/inmobiliarios.service';
-import { Inmobiliario } from 'src/app/interfaces/inmobiliarios';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 
 @Component({
   selector: 'app-crear-inmobiliario',
@@ -14,6 +14,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class CrearInmobiliarioComponent implements OnInit {
 
   public form: FormGroup;
+
+  public inmobiliario: any;
+
 
   calificaciones = [
     { value: 'clubCampo', viewValue: 'Club de campo' },
@@ -32,7 +35,7 @@ export class CrearInmobiliarioComponent implements OnInit {
   selectedEstado = ""
 
 
-  constructor(private fb: FormBuilder, private router: Router, private service: InmobiliariosService) {
+  constructor(private fb: FormBuilder, private router: Router, private service: InmobiliariosService, private activate: ActivatedRoute) {
 
     this.form = this.fb.group({
       nombre: ['', Validators.required],
@@ -62,7 +65,28 @@ export class CrearInmobiliarioComponent implements OnInit {
       })
   }
 
+
+ 
+
+
   ngOnInit(): void {
+    this.cargar();
   }
+
+
+  cargar():void {
+    this.activate.params.subscribe(
+      e=>{
+        let id=e['id'];
+        if(id){
+         this.service.getInmobiliario(id).subscribe(data => {
+           this.inmobiliario = data;
+         });
+        }
+      }
+    )
+ }
+
+
 
 }

@@ -25,12 +25,11 @@ export class InmobiliariosService {
   }
 
 
-  getInmobiliario(id:string): Observable<Inmobiliario[]>{
-    return this.http.get<Inmobiliario[]>(`http://localhost:3000/inmobiliarios?id=${id}`);
-  }
 
-  deletInmobiliario(id:string): Observable<Inmobiliario[]>{
-    return this.http.get<Inmobiliario[]>(`http://localhost:3000/inmobiliarios?id=${id}`);
+  
+
+  getInmobiliario(id:string): Observable<Inmobiliario>{
+    return this.http.get<Inmobiliario>(`http://localhost:3000/inmobiliarios/${id}`);
   }
   
   

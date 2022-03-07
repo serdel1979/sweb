@@ -1,6 +1,6 @@
 <div class="container">
     <mat-toolbar class="barra">
-        <span>Creando un inmobiliario</span>
+        <span>Inmobiliario</span>
         <div class="example-spacer"> </div>
     </mat-toolbar>
 
@@ -16,7 +16,7 @@
             <mat-form-field appearance="fill">
                 <mat-label>Calificación</mat-label>
                 <mat-select [(value)]="selected" formControlName="tipo">
-                    <mat-option *ngFor="let item of calificaciones" [value]="item.viewValue">{{ item.viewValue }}
+                    <mat-option *ngFor="let item of calificaciones">{{ item.viewValue }}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
@@ -30,7 +30,7 @@
             <mat-form-field appearance="fill" #input autocomplete="off">
                 <mat-label>Estado</mat-label>
                 <mat-select [(value)]="selectedEstado" formControlName="estado">
-                    <mat-option *ngFor="let item of estado" [value]="item.viewValue">{{ item.viewValue }}</mat-option>
+                    <mat-option *ngFor="let item of estado">{{ item.viewValue }}</mat-option>
                 </mat-select>
             </mat-form-field>
             <div *ngIf="selectedEstado=='Asignación de valores'">
@@ -43,7 +43,7 @@
                     <input matInput formControlName="acta">
                 </mat-form-field>
             </div>
-            <div *ngIf="selectedEstado=='enActoAdmin'">
+            <div *ngIf="selectedEstado=='Acto administrativo'">
                 <mat-form-field class="ancho" appearance="fill" #input autocomplete="off">
                     <mat-label>Número</mat-label>
                     <input matInput formControlName="numadmin">
@@ -64,8 +64,9 @@
                 <input matInput formControlName="idMae">
             </mat-form-field>
             <br>
-            <button mat-raised-button type="submit" [disabled]="form.invalid">Guardar</button>
+            <button mat-raised-button type="submit">Guardar</button>
         </form>
+    
         <button style="margin-top: 10px;" mat-raised-button (click)="goBack()">Volver</button>
     </mat-card>
 </div>

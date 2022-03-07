@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSnackBar, TextOnlySnackBar } from '@angular/material/snack-bar';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { ActivatedRoute } from '@angular/router';
 import { Inmobiliario } from 'src/app/interfaces/inmobiliarios';
 import { InmobiliariosService } from 'src/app/services/inmobiliarios.service';
 
@@ -16,7 +17,7 @@ export class InmobiliariosComponent implements OnInit {
 
   listInmobiliarios: Inmobiliario[] = [];
 
-
+  
 
   displayedColumns: string[] = ['nombre', 'tipo', 'titulares', 'estado', 'idCou', 'idMae', 'Acciones'];
 
@@ -36,6 +37,8 @@ export class InmobiliariosComponent implements OnInit {
       this.dataSource.sort = this.sort;
     });
   }
+
+  
 
 
 
