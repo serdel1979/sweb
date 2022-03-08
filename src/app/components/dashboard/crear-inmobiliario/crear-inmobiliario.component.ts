@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { InmobiliariosService } from 'src/app/services/inmobiliarios.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 
 @Component({
@@ -24,7 +24,9 @@ export class CrearInmobiliarioComponent implements OnInit {
     { value: 'chacra', viewValue: 'Club de chacra' },
     { value: 'urbano', viewValue: 'Urbano' },
   ];
+
   selected = 'Urbano';
+
   estado = [
     { value: 'enValores', viewValue: 'Asignación de valores' },
     { value: 'enActoAdmin', viewValue: 'Acto administrativo' },
@@ -40,17 +42,17 @@ export class CrearInmobiliarioComponent implements OnInit {
     this.form = this.fb.group({
       nombre: ['', Validators.required],
       tipo: ['', Validators.required],
-      titulares: ['', Validators.required],
-      estado: ['', Validators.required],
-      idCou: ['', Validators.required],
-      idMae: ['', Validators.required],
-      subestado: ['', Validators.required],
-      expediente: ['', Validators.required],
-      acta: ['', Validators.required],
-      num_admin: ['', Validators.required],
-      fecha: ['', Validators.required],
+      titulares: [''],
+      estado: [''],
+      idCou: [''],
+      idMae: [''],
+      subestado: [''],
+      expediente: [''],
+      acta: [''],
+      num_admin: [''],
+      fecha: [''],
     })
-
+    
   }
 
 

@@ -12,11 +12,14 @@
                 <input matInput formControlName="nombre">
             </mat-form-field>
             <br>
+            
+            
+         
 
             <mat-form-field appearance="fill">
                 <mat-label>Calificación</mat-label>
-                <mat-select [(value)]="selected" formControlName="tipo">
-                    <mat-option *ngFor="let item of calificaciones">{{ item.viewValue }}
+                <mat-select  formControlName="tipo" >
+                    <mat-option *ngFor="let item of calificaciones" [value]="item.value">{{ item.viewValue }}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
@@ -29,8 +32,8 @@
             <br>
             <mat-form-field appearance="fill" #input autocomplete="off">
                 <mat-label>Estado</mat-label>
-                <mat-select [(value)]="selectedEstado" formControlName="estado">
-                    <mat-option *ngFor="let item of estado">{{ item.viewValue }}</mat-option>
+                <mat-select formControlName="estado">
+                    <mat-option *ngFor="let item of estado" [value]="item.value">{{ item.viewValue }}</mat-option>
                 </mat-select>
             </mat-form-field>
             <div *ngIf="selectedEstado=='Asignación de valores'">
@@ -64,9 +67,10 @@
                 <input matInput formControlName="idMae">
             </mat-form-field>
             <br>
-            <button mat-raised-button type="submit">Guardar</button>
+            <button [disabled]="!form.valid" mat-raised-button type="submit">Guardar</button>
         </form>
-    
+        <div>{{ this.form.valid | json}}</div> 
+        <div>{{ this.form.value | json}}</div> 
         <button style="margin-top: 10px;" mat-raised-button (click)="goBack()">Volver</button>
     </mat-card>
 </div>
